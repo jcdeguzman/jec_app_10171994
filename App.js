@@ -18,10 +18,10 @@ export default class App extends React.Component {
             alert("Both username and password are required")
             return false
         } 
-        var usernameRegex = /^[a-zA-Z0-9\.@-]+$/;
+        var usernameRegex = /^[a-zA-Z0-9\.@_]+$/;
         var validusername = username.match(usernameRegex);
         if(validusername == null){
-            alert("Your username is not valid. Only characters A-Z, a-z, 0-9, '@', '.' and '-' are  acceptable.");
+            alert("Your username is not valid. Only characters A-Z, a-z, 0-9, '@', '.' and '_' are  acceptable.");
             return false;
         }
         var passwordRegex = /^[a-zA-Z0-9]+$/;
